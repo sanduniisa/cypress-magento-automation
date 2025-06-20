@@ -1,0 +1,28 @@
+{
+  "user": {
+    "email": "sandunitester+S32@gmail.com",
+    "firstname": "Sanduni",
+    "lastname": "SenarathArachchige",
+    "password": "Test@123$"
+  },
+  "products": [
+    {
+      "name": "Juno Jacket",
+      "size": "XL",
+      "colorIndex": 2
+    },
+    {
+      "name": "Neve Studio Dance Jacket",
+      "size": "L",
+      "colorIndex": 0
+    },
+    {
+      "name": "Nadia Elements Shell",
+      "size": "L",
+      "colorIndex": 1
+    }
+  ],
+  "search": {
+    "keyword": "jacket"
+  }
+}

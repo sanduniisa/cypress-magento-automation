@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-18T13:26:45.089Z",
+    "end": "2025-06-18T13:26:54.371Z",
+    "duration": 9282,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa0afbe0-ec8d-4cc0-9580-9cc30c25ce76",
+      "title": "",
+      "fullFile": "cypress/integration/tests/registration.spec.js",
+      "file": "cypress/integration/tests/registration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b2c11606-0b31-452e-a6f5-3cddbea93cbe",
+          "title": "Login Test - Magento",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Logs in using POM and validates success",
+              "fullTitle": "Login Test - Magento Logs in using POM and validates success",
+              "timedOut": null,
+              "duration": 9257,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_LoginPage.default.visit();\n_LoginPage.default.enterEmail(this.data.email);\n_LoginPage.default.enterPassword(Cypress.env('password'));\n_LoginPage.default.submit();\n_LoginPage.default.validateLoginSuccess();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'My Account' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'My Account' but never did.\n    at LoginPage.validateLoginSuccess (webpack://cypress-magento-automation/./cypress/pages/LoginPage.js:19:30)\n    at Context.eval (webpack://cypress-magento-automation/./cypress/integration/tests/registration.spec.js:15:14)",
+                "diff": null
+              },
+              "uuid": "5d7e0537-d21a-42c8-a5fe-6e2cbf9fb404",
+              "parentUUID": "b2c11606-0b31-452e-a6f5-3cddbea93cbe",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5d7e0537-d21a-42c8-a5fe-6e2cbf9fb404"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 9257,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

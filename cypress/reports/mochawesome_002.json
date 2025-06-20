@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-06-19T12:23:31.380Z",
+    "end": "2025-06-19T12:23:55.842Z",
+    "duration": 24462,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d56a6085-670a-4e60-9ce7-9d69942db90b",
+      "title": "",
+      "fullFile": "cypress/integration/tests/01_registration.spec.js",
+      "file": "cypress/integration/tests/01_registration.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "192bb182-1008-499d-bc79-3fb87ea6cf5e",
+          "title": "Test Case (A): Registration flow and login flow with valid credentials",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should register a new account successfully",
+              "fullTitle": "Test Case (A): Registration flow and login flow with valid credentials should register a new account successfully",
+              "timedOut": null,
+              "duration": 17533,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visit();\n_HomePage.default.enterFirstName(this.data.user.firstname);\n_HomePage.default.enterLastName(this.data.user.lastname);\n_HomePage.default.enterEmail(this.data.user.email);\n_HomePage.default.enterPassword(this.data.user.password);\n_HomePage.default.confirmPassword(this.data.user.password);\n_HomePage.default.clickCreatAnAccountButton();\n_HomePage.default.validateLoginSuccess();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.logged-in`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 10000ms: Expected to find element: `.logged-in`, but never found it.\n    at HomePage.validateLoginSuccess (webpack://cypress-magento-automation/./cypress/pages/HomePage.js:63:7)\n    at Context.eval (webpack://cypress-magento-automation/./cypress/integration/tests/01_registration.spec.js:18:13)",
+                "diff": null
+              },
+              "uuid": "03ed686b-50a3-45e4-bca7-59d446cfbd87",
+              "parentUUID": "192bb182-1008-499d-bc79-3fb87ea6cf5e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should login with the valid credentials",
+              "fullTitle": "Test Case (A): Registration flow and login flow with valid credentials should login with the valid credentials",
+              "timedOut": null,
+              "duration": 6776,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_HomePage.default.visitSignIn();\n_HomePage.default.enterLoginEmail(this.data.user.email);\n_HomePage.default.enterLoginPassword(this.data.user.password);\n_HomePage.default.clickSignIn();\n_HomePage.default.validateLoginSuccess();",
+              "err": {},
+              "uuid": "bba0232a-5301-4949-be87-aaee72fba163",
+              "parentUUID": "192bb182-1008-499d-bc79-3fb87ea6cf5e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bba0232a-5301-4949-be87-aaee72fba163"
+          ],
+          "failures": [
+            "03ed686b-50a3-45e4-bca7-59d446cfbd87"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 24309,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

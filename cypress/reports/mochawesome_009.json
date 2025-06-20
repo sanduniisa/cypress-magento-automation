@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-19T12:27:25.947Z",
+    "end": "2025-06-19T12:27:35.943Z",
+    "duration": 9996,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "676463d4-c5a4-4932-b175-9fc8675b7eae",
+      "title": "",
+      "fullFile": "cypress/integration/tests/04_searchResults.spec.js",
+      "file": "cypress/integration/tests/04_searchResults.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "02e691e5-fbed-451a-bbb6-155163969607",
+          "title": "Test Case (D): Search and validate results",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should search for a product and validate that jacket products are displayed",
+              "fullTitle": "Test Case (D): Search and validate results should search for a product and validate that jacket products are displayed",
+              "timedOut": null,
+              "duration": 9896,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const keyword = this.data.search.keyword;\n_HomePage.default.searchForProduct(keyword);\n// Validate the search results heading\ncy.get('span.base').should('contain.text', `Search results for: '${keyword}'`);\n// Ensure at least one product is shown\ncy.get('.product-item-name').should('have.length.greaterThan', 0);\n// Validate that visible product names include the keyword\ncy.get('.product-item-name:visible').each($el => {\n  cy.wrap($el).invoke('text').then(text => {\n    const trimmed = text.trim().toLowerCase();\n    expect(trimmed).to.not.be.empty;\n    expect(trimmed).to.include('jacket');\n  });\n});",
+              "err": {},
+              "uuid": "4abdec7c-5622-4bdc-b2b1-04a672a65b54",
+              "parentUUID": "02e691e5-fbed-451a-bbb6-155163969607",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4abdec7c-5622-4bdc-b2b1-04a672a65b54"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9896,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
