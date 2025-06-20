@@ -13,7 +13,7 @@
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Node.js](https://nodejs.org/)
 - NPM (comes with Node.js)
 - Google Chrome (or any browser supported by Cypress)
 
