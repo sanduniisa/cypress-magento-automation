@@ -1,0 +1,416 @@
+{
+	"id": "58a1b8f2-fdd1-41e6-875f-4bca2b73fca6",
+	"name": "Swagger Petstore Assignment",
+	"timestamp": "2025-06-19T13:30:14.307Z",
+	"collection_id": "7103837-ad212f42-cc6a-4a60-b707-aef93b320fbc",
+	"folder_id": 0,
+	"environment_id": "7103837-8ce414ec-456a-4e62-9b24-a08bfc1033df",
+	"totalPass": 13,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-06-19T13:30:10.716Z",
+	"totalFail": 11,
+	"results": [
+		{
+			"id": "3b329268-61b3-475d-a466-18f223016e71",
+			"name": "Success Operation Find pet by ID",
+			"url": "https://petstore.swagger.io/v2/pet/9223372036854774889",
+			"time": 211,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response should be a valid pet object": true,
+				"Validate ID in response": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be a valid pet object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate ID in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				211
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response should be a valid pet object": true,
+					"Validate ID in response": true
+				}
+			]
+		},
+		{
+			"id": "c8c257a8-18a5-464e-8ccf-49023c4746c8",
+			"name": "Invalid ID supplied Find pet by ID",
+			"url": "https://petstore.swagger.io/v2/pet/*(%&#@#$87",
+			"time": 208,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400 ": true,
+				"Response body contains Invalid ID supplied": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400 ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body contains Invalid ID supplied": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				208
+			],
+			"allTests": [
+				{
+					"Status code is 400 ": true,
+					"Response body contains Invalid ID supplied": false
+				}
+			]
+		},
+		{
+			"id": "d3fea2fb-8878-468e-a3fd-64cf294cc8ac",
+			"name": "Invalid ID supplied Find pet by ID - id with integers and letters",
+			"url": "https://petstore.swagger.io/v2/pet/-77648w",
+			"time": 840,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 400 ": false,
+				"Response body contains Invalid ID supplied": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400 ": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response body contains Invalid ID supplied": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				840
+			],
+			"allTests": [
+				{
+					"Status code is 400 ": false,
+					"Response body contains Invalid ID supplied": false
+				}
+			]
+		},
+		{
+			"id": "5f39cf21-62cd-449a-82da-feee8e70937b",
+			"name": "Pet not Found Find pet by ID",
+			"url": "https://petstore.swagger.io/v2/pet/922337254775240",
+			"time": 204,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"response body contains Pet not found": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response body contains Pet not found": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"response body contains Pet not found": true
+				}
+			]
+		},
+		{
+			"id": "ad349039-9885-410d-9674-12a7c73914f3",
+			"name": "Updates a pet in the store with form data",
+			"url": "https://petstore.swagger.io/v2/pet/9223372036854774889",
+			"time": 204,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response code is 200": true,
+				"Message contains updated pet ID": true
+			},
+			"testPassFailCounts": {
+				"Response code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message contains updated pet ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Response code is 200": true,
+					"Message contains updated pet ID": true
+				}
+			]
+		},
+		{
+			"id": "848db490-6b68-4654-9cec-ef7c6f5dc4e2",
+			"name": "Updates a pet in the store with form data with invalid data",
+			"url": "https://petstore.swagger.io/v2/pet/9223372016900017038",
+			"time": 205,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Response code is 405": false,
+				"response body contains Invalid input ": false
+			},
+			"testPassFailCounts": {
+				"Response code is 405": {
+					"pass": 0,
+					"fail": 1
+				},
+				"response body contains Invalid input ": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Response code is 405": false,
+					"response body contains Invalid input ": false
+				}
+			]
+		},
+		{
+			"id": "6e1d3e85-ae0c-410a-b6f4-d99ae3bb5a9e",
+			"name": "Find Pets by status",
+			"url": "https://petstore.swagger.io/v2/pet/findByStatus?status=pending",
+			"time": 204,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response Body contains status string pending": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response Body contains status string pending": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response Body contains status string pending": true
+				}
+			]
+		},
+		{
+			"id": "51ecf0f3-5370-41d2-a855-ff3eec3d75d5",
+			"name": "Add a new pet to the store",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 206,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string to ducky": true,
+				"Response contains id, category, name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string to ducky": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response contains id, category, name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				206
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string to ducky": true,
+					"Response contains id, category, name": true
+				}
+			]
+		},
+		{
+			"id": "cd87103c-5c25-4582-845d-6140371c9b18",
+			"name": "Add a new pet to the store with Invalid syntax input",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 205,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 405": false,
+				"Response message contains Invalid input": false,
+				"Invalid input Add a new pet to the store contains response message code 405": false
+			},
+			"testPassFailCounts": {
+				"Status code is 405": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response message contains Invalid input": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Invalid input Add a new pet to the store contains response message code 405": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				205
+			],
+			"allTests": [
+				{
+					"Status code is 405": false,
+					"Response message contains Invalid input": false,
+					"Invalid input Add a new pet to the store contains response message code 405": false
+				}
+			]
+		},
+		{
+			"id": "e4fc5b02-27a0-4f4f-a09e-2fe43f3e1d29",
+			"name": "Add a new pet to the store with Invalid input 2",
+			"url": "https://petstore.swagger.io/v2/pet",
+			"time": 204,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 405": false,
+				"Response message contains Invalid input": false,
+				"Invalid input Add a new pet to the store contains response message code 405": false
+			},
+			"testPassFailCounts": {
+				"Status code is 405": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response message contains Invalid input": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Invalid input Add a new pet to the store contains response message code 405": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				204
+			],
+			"allTests": [
+				{
+					"Status code is 405": false,
+					"Response message contains Invalid input": false,
+					"Invalid input Add a new pet to the store contains response message code 405": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2691,
+	"collection": {
+		"requests": [
+			{
+				"id": "3b329268-61b3-475d-a466-18f223016e71",
+				"method": "GET"
+			},
+			{
+				"id": "c8c257a8-18a5-464e-8ccf-49023c4746c8",
+				"method": "GET"
+			},
+			{
+				"id": "d3fea2fb-8878-468e-a3fd-64cf294cc8ac",
+				"method": "GET"
+			},
+			{
+				"id": "5f39cf21-62cd-449a-82da-feee8e70937b",
+				"method": "GET"
+			},
+			{
+				"id": "ad349039-9885-410d-9674-12a7c73914f3",
+				"method": "POST"
+			},
+			{
+				"id": "848db490-6b68-4654-9cec-ef7c6f5dc4e2",
+				"method": "POST"
+			},
+			{
+				"id": "6e1d3e85-ae0c-410a-b6f4-d99ae3bb5a9e",
+				"method": "GET"
+			},
+			{
+				"id": "51ecf0f3-5370-41d2-a855-ff3eec3d75d5",
+				"method": "POST"
+			},
+			{
+				"id": "cd87103c-5c25-4582-845d-6140371c9b18",
+				"method": "POST"
+			},
+			{
+				"id": "e4fc5b02-27a0-4f4f-a09e-2fe43f3e1d29",
+				"method": "POST"
+			}
+		]
+	}
+}
